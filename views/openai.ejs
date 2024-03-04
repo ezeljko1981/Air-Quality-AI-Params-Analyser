@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/login.css" />
+    <title>Air Quality - AI params analyser</title>
+    <link rel="icon" href="/img/favicon.png">
+</head>
+
+<body>
+    <% if(data !==null) { %>
+        <% const myobj=JSON.parse(data); %>
+            <div class="login">
+                <img width="64" height="64" src="/img/icons8-chatgpt-48.png" alt="openai">
+                <p><%= myobj.data.u %></p>
+                <p><i><%= myobj.data.a %></i></p>
+                <img src="/img/icons8-back-48.png" alt="back" onclick="history.back()" />                
+            </div>
+    <% } %>
+</body>
+
+</html>
